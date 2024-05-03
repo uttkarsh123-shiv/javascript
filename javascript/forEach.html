@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>diffrenece between for and forEach loop</h1>
+    <p>forEach is good for readability but for loop is good for performance/fast. </p>
+    <p>we can use break in for loop but cant use in forEach </p>
+    <p>scope of i is not in function but outside the function in for loop</p>
+    <p>scope of i is inside function in forEach loop</p>
+</body>
+<script>
+    let a = [15,42,33,34,20];
+
+    let i=25;
+    for(i=0;i<a.length;i++){
+        console.log(a[i]);
+    }
+    console.log(i);
+
+    a.forEach((i)=>{
+        console.log(i);
+    })
+</script>
+</html>

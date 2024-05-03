@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    let fruits = [{name:'apple', color:'red', calories:94},
+        {name:'orange', color:'orange', calories:194},
+        {name:'guvava', color:'green', calories:4},
+        {name:'pineapple', color:'yellow', calories:9},];
+
+        //-------push()--------
+    fruits.push({name:'banana',color:'yellow',calories:43});
+
+    //-------forEach()--------
+        fruits.forEach( fruit => {console.log(fruit)});
+    
+       // --------map()-------
+        const fruitsName = fruits.map(fruit =>fruit.name);
+        const fruitColor = fruits.map(fruit => fruit.color);
+        const fruitCalorie = fruits.map(fruit =>fruit.calories);
+        console.log(fruitsName, fruitColor, fruitCalorie);
+
+        // ------filter()------
+        const ColorYellow = fruits.filter(fruit => fruit.color === "yellow");
+        const caloriecondition = fruits.filter(fruit => fruit.calories<10);
+        console.log(ColorYellow);
+        console.log(caloriecondition);
+
+        //-------reduce()------
+        const  maxFruit = fruits.reduce((max,fruit) =>
+        fruit.calories > max.calories ? fruit : max);
+        console.log(maxFruit);
+
+        console.log(fruits);
+        console.log(fruits[2]);
+        console.log(fruits[1].color);
+
+
+
+
+
+
+    //use of arrow function
+        // fuit.caolor = fruits.filter(function(fruit) {return fruit.calorie;});
+        // fruit.color = fruits.filter(fruit => fruit.calorie );
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<script>
+    //you walk the dog
+    //clean the kitchen
+    //take out the trash
+
+//CALLBACK
+    function walk(callback){
+        setTimeout(()=>{
+            console.log("you walk the dog 🐕‍🦺");
+        },1500);
+        callback();
+    }
+
+    function clean(callback){
+        setTimeout(() =>{
+            console.log("You clean the kitchen 🌝🧹");
+        },2500);
+        callback();
+    }
+    function trash(callback){
+        setTimeout(() =>{
+            console.log("Throw the trash ♻️");
+        },500);
+        callback();
+    }
+
+    walk(()=>{
+        clean(()=>{
+            trash(()=>
+                console.log("You finished all work"));
+        });
+    });
+
+
+
+//PROMISE
+function walk(){
+        return new Promise((resolve,reject) =>{
+            setTimeout(()=>{
+                const walkeddog = false;
+                if(walkeddog) resolve("you walk the dog 🐕‍🦺");
+                else reject("You DIDN'T walk the dog");
+            },1500);
+     })
+ }
+
+ function clean(){
+        return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+                const cleaned = true;
+                if(cleaned) resolve("You clean the kitchen 🌝🧹");
+                else reject("You DIDN'T clean house");
+        },2500)
+        })
+    }
+
+
+    function trash(){
+        return new Promise((resolve,reject) =>{
+            setTimeout(() =>{
+                const throwtrash = false;
+                if(throwtrash) resolve("you take out trash");
+                else reject("you DIDN't throw trash");
+        },500);
+        })
+    }
+ walk().then(value => {console.log(value); return clean()})
+    .then(value => {console.log(value); return trash()})
+    .then(value => {console.log(value); console.log("You finished all work")})
+    .catch(error =>console.error(error));
+</script>
+</html>

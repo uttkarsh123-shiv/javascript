@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Object</h1>
+    <p>object is a collection of keys and corresponding values </p>
+    <p>wind:function{} and wind(){} are same</p>
+   <p>Method: function when used in object is called as method</p>
+</body>
+<script>
+   const person1 = {
+    fname:'Josh',
+    lname:'buttler',
+    age:'39',
+    married:true,
+    sayhello: function(){
+        console.log("Hello i am josh");
+    },
+    eat: () => console.log("my fav food is pizza")
+   };
+
+   const person2 = {
+    fname:'Kevin',
+    lname:'peterson',
+    age:'23',
+    sayhello(){
+        console.log("Hello i am kevin");
+    },
+    eat: () => console.log("my fav food is burger")
+   };
+
+
+   console.log(person1);          //print full object
+   console.log(person1.fname);   // print only name
+   console.log(person1.age);
+
+   person1.sayhello();
+
+</script>
+</html>

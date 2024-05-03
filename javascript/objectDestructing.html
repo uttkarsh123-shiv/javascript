@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> const {put all keys or any you want } = address</p>
+</body>
+<script>
+    const address = {
+        street:'a',
+        city:'b',
+        country:'c'
+    };
+
+    //ugly method
+    const str = address.street;
+    const ci = address.city;
+    const count = address.country;
+
+    //best way
+    const {street:A, city:B} = address;
+    console.log(A);
+</script>
+</html>

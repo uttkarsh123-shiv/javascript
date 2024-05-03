@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Map() method</h1>
+    <p>map method accept callback and return a new array</p>
+    <p>map method create new array,object and work on it but forEach dont create instead change or do thing in original arrays</p>
+</body>
+<script>
+    // let a = [2,4,6,8,10];
+
+    // console.log(a.map(odd));
+    // function odd(a){
+    //     return a+1;
+    // }
+
+    let unformattedDate = ['2024-29-01', '2003-4-01', '3004-76-86'];
+        let formattedDate = unformattedDate.map(format);
+        console.log(formattedDate);
+    function format(element){
+        const parts = element.split('-');
+        return `${parts[0]}/${parts[1]}/${parts[2]}`;
+    }
+</script>
+</html>

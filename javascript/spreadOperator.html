@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p> difference between concat and spread operator to add two array is we can't add any random item in array while merging two array but in spread oprator we can add any item </p>
+    
+</body>
+<script>
+    // let a = [1,2,3];
+    // let b = [5,6,7];
+
+    // const clone = [...a];    //clone of 'a' array
+
+    // var c= a.concat(b);
+    // var c = [...a, parseInt('4'), ...b];
+    // console.log(c);
+// console.log(clone);
+    let first = { fname : 'Josh'};
+    let second = { lname : 'buttler'};
+
+    let name = {...first, ...second, age:34};
+    console.log(name);
+</script>
+</html>

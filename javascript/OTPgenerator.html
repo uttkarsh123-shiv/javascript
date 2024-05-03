@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <script src="https://kit.fontawesome.com/a309b786cc.js" crossorigin="anonymous"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        a{
+            text-decoration: none;
+        }
+    .main{
+        width:100vw;
+        height: 100vh;
+        display: flex;
+    }
+    .left{
+        width:40vw;
+        height: 100vh;
+        background:#1a257d;
+    }
+    .right{
+        display: flex;
+        justify-content: center;
+        align-items:center;
+        width: 60vw;
+        height: 100vh;
+        background: white;
+    }
+    .login{
+        width:450px;
+        height:80vh;
+        background: beige;
+        /* margin:10px; */
+        padding:30px;
+    }
+
+    .main .right button{
+        width:400px;
+        height: 40px;
+        border-radius: 5px;
+        border: none;
+        background:rgb(104, 104, 251);
+        color: white;
+        cursor: pointer;
+
+    }
+    #captcha{
+        width:100px;
+        height: 30px;
+        background: white;
+    }
+    #captcha::after{
+        content: '';
+        position: absolute;
+        width: 120px;
+        transform: rotateZ(-15deg);
+         height: 0.5px;
+        background: #000;
+    }
+    </style>
+</head>
+<body onload="Captcha(6)">
+<div class="main">
+    <div class="left"><h2>भारत निर्वाचन आयोग</h2>
+    <h2>
+        Election Commission of India</h2></div>
+    <div class="right">
+        <div class="login">
+            <h3>Login</h3> <br>
+            <p>Do not have an account?<a href="#">Sign-Up</a></p>
+<br>
+            <h4>Indian Resident Elector</h4>
+            <h4>Indian Overseas Elector</h4>
+<br>
+            <p>Registered mobile no./Email ID/EPIC no. <span style="color: red;">*</span> </p>
+            <br>
+            <input type="text" name="" id="" placeholder="Enter registered mobile no./Email ID/EPIC no.">
+            <br>
+            <p>Password <span style="color: red;">*</span></p>
+
+            <a href="#">Forgot Password?</a>
+            <br>
+           <input type="text" disabled >
+           <i class="fa-solid fa-rotate-right"></i>
+           <p>Captcha <span style="color: red;">*</span></p>
+           <div id="captcha" ></div>
+           <br>
+            <button>Request OTP</button>
+
+
+
+        </div>
+    </div>
+</div>
+</body>
+<script>
+    function Captcha(length){
+        let captch = "";
+
+        let arr = [
+                    'a','b','c','d','e','f','g','h','i','j','k','l','m',
+                     'n','o','p','q','r','s','t','u','v','w','x','y','z',
+                      'A','B','C','D','E','F','G','H','I','J','K','L','M'
+                      ,'N','O','P','Q','R','S','T','U','V','W','X','Y','Z',
+                    0,1,2,3,4,5,6,7,8,9];
+
+        for(let i=0;i<length;i++){
+            captch+=arr[(Math.floor(Math.random()*arr.length))];
+        }
+        captchaStr = captcha.join('');
+
+        
+
+        return captch;
+    }
+
+   console.log( Captcha(6));
+
+
+
+    function otpgenerator(length){
+        let OTP = "";
+
+        for(let i=0;i<length;i++){
+            OTP+=Math.floor(Math.random()*10).toString();
+        }
+        return OTP;
+    }
+
+    console.log(otpgenerator(6));
+</script>
+</html>

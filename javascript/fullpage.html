@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style> 
+     *{
+      margin: 0;
+      padding:0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+     } 
+      .container{
+        scroll-snap-type: y mandatory;
+        overflow-y: scroll;
+        height: 100vh;
+
+      }
+     section{
+      height: 100vh;
+      width: 100vw;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      scroll-snap-align: start;
+     }
+
+     h1{
+      color: aliceblue;
+     }
+     .one1{
+      background: green;
+     }
+     .one2{
+      background: red;
+     }
+     .one3{
+      background: blue;
+     }
+     .one4{
+      background: grey;
+     }
+     .one5{
+      background: yellow;
+     }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <section class="one1">
+      <h1>First Page</h1>
+    </section>
+    <section class="one2">
+      <h1>second Page</h1>
+    </section>
+    <section class="one3">
+      <h1>third Page</h1>
+    </section>
+    <section class="one4">
+      <h1>fourth Page</h1>
+    </section>
+    <section class="one5">
+      <h1>Fifth Page</h1>
+    </section>
+  </div>
+</body>
+</html>

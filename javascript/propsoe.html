@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            position: absolute;
+            top:50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+            background:pink;
+        }
+        button{
+            width:60px;
+            height:40px;
+            margin:20px;
+            border-radius: 20px;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="head">Do you love me? 💓</h1>
+    <button style="background-color: blue;" onclick="yes()">Yes</button>
+    <button style="background-color: red;" id="target" onmouseover="no()">No
+ </button>
+</body>
+<script>
+    function yes(){
+    alert('Thank you so much#️ love you too')
+    }
+    function no(){
+        const target = document.getElementById('target');
+        target.style.left = Math.floor(Math.random()*500)+"px";
+        target.style.top = Math.floor(Math.random()*500)+"px";
+
+        
+    }
+</script>
+</html>
